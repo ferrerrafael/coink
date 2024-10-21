@@ -1,23 +1,34 @@
 using System;
-using MySql.Data.MySqlClient;
+using Npgsql;
+
 
 var builder = WebApplication.CreateBuilder(args);
-//string yourConnectionString = builder.Configuration.GetConnectionString("Default");
 
 var app = builder.Build();
-string yourConnectionString = "Server=127.0.0.1;Database=empropazlocal;User ID=empropazlocal;Password=2GinTwasODakgOPLqCKoOueYGQUsfEjYjsSiEM2Qr7I;";
-using var conn = new MySqlConnection(yourConnectionString);
+
+string connectionString = "Server=127.0.0.1;Database=template1;User ID=postgres;Password=@Super12345;";
+using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
+connection.Open();
 
 
 app.MapGet("/", () => {
 
     try{
+        using NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM departamentos", connection);
+        using NpgsqlDataReader reader = cmd.ExecuteReader();
+
+        while (reader.Read())
+        {
+        // Use the fetched results
+            Console.WriteLine("Fila encontrada");
+        }
+
+
         // Abrir la conexión
-        conn.Open();
-        Console.WriteLine("Conexión exitosa a MySQL!");
+        //conn.Open();
 
         // Aquí puedes ejecutar tus comandos SQL
-    }catch (MySqlException ex)
+    }catch (NpgsqlException ex)
     {
         // Manejo de errores de conexión
         

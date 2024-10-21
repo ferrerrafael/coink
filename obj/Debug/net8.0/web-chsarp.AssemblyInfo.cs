@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("web-chsarp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaa07c70a27bf189b0df7726d675ab44e1458b68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba9c2aad2c824d36697f2712283448dbdb3006b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("web-chsarp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("web-chsarp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

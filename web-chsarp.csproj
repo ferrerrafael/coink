@@ -8,8 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="9.1.0" />
-    <!--<PackageReference Include="MySqlConnector.DependencyInjection" Version="2.3.6" />-->
+    <!--<PackageReference Include="MySql.Data" Version="9.1.0" />-->
+    <PackageReference Include="MySqlConnector.DependencyInjection" Version="2.3.6" />
+    <PackageReference Include="Npgsql" Version="8.0.5" />
   </ItemGroup>
 
 </Project>
